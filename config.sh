@@ -4,8 +4,6 @@ project_name=bsale_test
 ##Docker images
 dockerfile=(react nodejs)
 download_image=(phpmyadmin/phpmyadmin mysql:5.7.38)
-
-
 #Preferentemente no editar, a menos que desees cambiar la posicion de archivos
 ##Env
 env=./config/.env
