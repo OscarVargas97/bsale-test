@@ -8,4 +8,3 @@ services:
     container_name: nodejs-prod-${PROJECT_NAME}
     environment:
       DD_DATABASE_NAME: ${DATABASE_NAME}
-    command: npx sequelize db:migrate
