@@ -41,8 +41,7 @@ En caso de ingresar al modo de development se levanta un contenedor con phpmyadm
 - api: [http://localhost:4000](http://localhost:4000)
 ## Enunciado
 
-
-Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](./docs/Test.md)
+Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](docs/test.md)
 
 ## Docs
 Se puede acceder a la documentación de la aplicación atravesé del siguiente enlace:
