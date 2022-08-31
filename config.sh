@@ -22,9 +22,9 @@ command(){
 compose(){
 	if [[ $2 == "dev" ]]; then
 		command $dev $1
-	elif [[ $2 == "test" ]] then
+	elif [[ $2 == "test" ]]; then
 		command $test $1
-	elif [[ $2 == "clear" ]] then
+	elif [[ $2 == "clear" ]]; then
 		command $dev down
 		command $prod down
 		command $test down
