@@ -1,6 +1,6 @@
 #!/bin/bash
 #Seccion editar
-project_name=portfolio
+project_name=bsale_test
 ##Docker images
 dockerfile=(react nodejs)
 download_image=(phpmyadmin/phpmyadmin mysql:5.7.38)
