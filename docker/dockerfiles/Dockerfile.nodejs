@@ -3,7 +3,7 @@ WORKDIR /myapp
 RUN apk apk update && apk upgrade && apk update
 COPY ./server/package.json ./
 RUN npm install && npm cache clean --force
-COPY ./server .
+COPY ./server/. .
 #Correr la migracion
 ##############################Prod##############################
 FROM base as production

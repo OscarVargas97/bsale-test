@@ -1,18 +1,16 @@
 #!/bin/bash
 #Seccion editar
-project_name=portfolio
+project_name=bsale_test
 ##Docker images
 dockerfile=(react nodejs)
 download_image=(phpmyadmin/phpmyadmin mysql:5.7.38)
-
-
 #Preferentemente no editar, a menos que desees cambiar la posicion de archivos
 ##Env
-env=./config/.env
+env=config/.env
 ##Docker compose files
-base=./docker/docker-compose.yml 
-dev=./docker/docker-compose.dev.yml
-prod=./docker/docker-compose.prod.yml
+base=docker/docker-compose.yml 
+dev=docker/docker-compose.dev.yml
+prod=docker/docker-compose.prod.yml
 test=""
 
 command(){
@@ -22,9 +20,9 @@ command(){
 compose(){
 	if [[ $2 == "dev" ]]; then
 		command $dev $1
-	elif [[ $2 == "test" ]] then
+	elif [[ $2 == "test" ]]; then
 		command $test $1
-	elif [[ $2 == "clear" ]] then
+	elif [[ $2 == "clear" ]]; then
 		command $dev down
 		command $prod down
 		command $test down
