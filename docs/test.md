@@ -48,41 +48,17 @@ conexiones inactivas por más de 5 segundos sean abortadas, por lo que te
 recomendamos utilizar alguna estrategia de “keep alive”
 
 Tablas
+![](./imgs/tablacategory.png)
+![](./imgs/tablaproduct.png)
 
-```
-product
-id Identificador único del producto (int)
-name Nombre del producto (varchar)
-url_image URL de la imagen asociada al producto (varchar)
-price Precio de venta del producto (float)
-discount Porcentaje de descuento del producto (int)
-category Identificador de la categoría (int)
-```
-```
-category
-id Identificador único de la categoría (int)
-name Nombre de la categoría (varchar)
-```
 
 **Ejemplos de las imágenes que se encuentran en la BD**
-
+![](./imgs/ejemplo1.png)
+![](./imgs/ejemplo2.png)
+![](./imgs/ejemplo3.png)
 
 #### CONOCE LA PAUTA DE EVALUACIÓN
-
-```
-Categoría Acción que evaluaremos Ponderación
-Requisito obligatorio Se debe utilizar control de versiones Obligatorio
-Requisito obligatorio La aplicación debe tener deploy Obligatorio
-Programación El código debe ser limpio, ordenado y
-seguir buenas prácticas
-40 %
-Programación La aplicación debe ser eficiente y controlar
-errores
-Documentación Documentar la aplicación* 20 %
-Funcionalidad Que se entregue buena usabilidad y
-experiencia al usuario.^40 %
-TOTAL 100 %
-```
+![](./imgs/pauta.png)
 ```
 ● ¿Quéesdocumentar? implicaexplicarejercicio,Apirest,FrontendyReadmeen
 el repositorio de ambos proyectos (back y front).
