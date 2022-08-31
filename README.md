@@ -3,7 +3,14 @@
 
 ## Comandos de ejecución
 En caso de no tener docker compose instalado dejo un enlace de la documentación oficial [aquí](https://docs.docker.com/compose/install/).
+Se recomienda revisar las ultimas versiones de docker-compose desde el enlace oficial de github que se encuentra justo [aquí](https://github.com/docker/compose/releases).
 
+Tras purgar o eliminar el script utilizado anteriormente para instalar docker compose, se deben utilizar los siguientes comandos para instalar la version actual utilizada:
+```console
+sudo curl -L "https://github.com/docker/compose/releases/download/2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+```
 Lo primero es clonar el repositorio y dirigirnos a la carpeta de bsale-test, finalmente cargar los comandos de ejecución.
 ```console
 git clone https://github.com/OscarVargas97/bsale-test.git
@@ -24,11 +31,11 @@ pdownall
 ```
 Tambien es posible realizar el building de las imágenes y contenedores gracias al comando:
 ```console
-#para development
+# para development
 pbuild dev
-#para test
+# para test
 pbuild test
-#para producción
+# para producción
 pbuild
 ```
 
@@ -40,7 +47,6 @@ En caso de ingresar al modo de development se levanta un contenedor con phpmyadm
 - phpmyadmin: [http://localhost:8081](http://localhost:8081)
 - api: [http://localhost:4000](http://localhost:4000)
 ## Enunciado
-
 Para leer el enunciado completo, te invito a dar click en el siguiente enlace: [Test.md](docs/test.md)
 
 ## Docs
