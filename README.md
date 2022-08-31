@@ -6,7 +6,7 @@ En caso de no tener docker compose instalado dejo un enlace de la documentación
 
 Lo primero es clonar el repositorio y dirigirnos a la carpeta de bsale-test, finalmente cargar los comandos de ejecución.
 ```console
-git clone https://github.com/OscarVargas97/BesTestEver.git
+git clone https://github.com/OscarVargas97/bsale-test.git
 cd bsale-test
 source commands.sh
 ```
