@@ -6,11 +6,11 @@ dockerfile=(react nodejs)
 download_image=(phpmyadmin/phpmyadmin mysql:5.7.38)
 #Preferentemente no editar, a menos que desees cambiar la posicion de archivos
 ##Env
-env=./config/.env
+env=config/.env
 ##Docker compose files
-base=./docker/docker-compose.yml 
-dev=./docker/docker-compose.dev.yml
-prod=./docker/docker-compose.prod.yml
+base=docker/docker-compose.yml 
+dev=docker/docker-compose.dev.yml
+prod=docker/docker-compose.prod.yml
 test=""
 
 command(){
