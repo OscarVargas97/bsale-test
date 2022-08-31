@@ -1,70 +1,95 @@
-# Prueba Tecnica LicitaLab
+# DESAFÍO
 
-Gracias por postular a la oferta por el puesto de trabajo de Desarrollador Full Stack.
-La siguiente prueba servirá para medir sus conocimientos en términos de las tecnologías
-solicitadas como requisito para postular a este puesto de trabajo.
+```
+Objetivo
+```
+Determinarsielcandidatoestáencondicionesdeinteractuarconunabasededatos
+a través de una aplicación web, implementando cliente y servidor.
+Esteejercicio,notieneningúnfincomercialniestratégico,sóloqueremosmedirtus
+habilidades...
 
-## Introducción
-A diario tenemos un montón de cosas por hacer, y qué mejor que hacer una lista de
-autocompromisos que se adquieren para las tareas que nos faltan por hacer en el menester
-diario.
-Esta prueba consiste en realizar un sistema en que el usuario pueda crear, modificar y
-eliminar tareas, las que tendrán descripción, fecha de creación y fecha de vencimiento.
-Asimismo, dada la fecha de vencimiento, el sistema debe indicar con algún sistema de
-colores las tareas que están a tiempo de realizarse, a punto de vencer y ya vencidas. Por
-supuesto, el usuario podrá ordenar y filtrar tareas según fecha o contenido en su
-descripción.
-La aplicación debe tener un aspecto como el siguiente:
+```
+Ejercicio
+```
+Construirunatiendaonlinequedespliegueproductosagrupadosporlacategoríaa
+la que pertenecen, generando por separado backend (API REST) y frontend
+(aplicaciónquelaconsuma)yutilizandolabasededatosquesedisponibilizapara
+su desarrollo.
 
-## Requisitos
-La aplicación DEBE ser construida en su Front-end con el framework React.js
-(https://reactjs.org/), ademas, cada pieza que el postulante identifique que se pueda
-construir como un componente, debe entonces mostrarse como tal a nivel de código. Se le
-solicita al postulante que utilice la arquitectura Redux (https://redux.js.org/) para el desarrollo
-de la aplicación.
-Para el desarrollo del servidor API, se debe usar NEST.js (https://nestjs.com/), o Express.js
-en conjunto de un ORM adhoc para el trabajo de modelado y comunicación con el
-Front-End.
-Para el correcto desarrollo del trabajo, se le pide al postulante que utilice alguna
-herramienta de control de versiones (GitHub o similar). Asimismo, la aplicación tendrá que
-ser entregada mediante una URL del repositorio. Es de exclusiva responsabilidad del
-desarrollador entregar todas las instrucciones para que su repositorio pueda ser
-ejecutado para evaluación; si no se puede ejecutar su trabajo, se considerará como no
-entregado.
+Además,hayqueagregarunbuscador,elcual **tienequeestarimplementadoanivel
+deservidor** ,medianteuna ApiRest **cuyolenguajeyframeworkpuedeserdelibre
+elección.** Es decir, los datos de productos deben llegarfiltrados al cliente.
 
-## Aspectos para evaluar.
-Se tendrá en cuenta la ubicación de los objetos, textos e iconos que se muestran en el
-mockup entregado. El estilo de colores, fuentes e iconos no será evaluado, pero le
-entregará un bonus al postulante.
-El orden de las tarjetas es definido en front, por lo que el postulante deberá implementar
-una función que ordene las tarjetas en pantalla según la voluntad del usuario a través del
-botón “ordenar”. El orden de las tarjetas disponibles será el siguiente:
-● Según fecha de creación de la tarjeta (de mayor a menor), orden por defecto
-● Según fecha de vencimiento (de menor a mayor)
-● Según estado de la tarjeta (siendo el más importante “atrasada”, y el menos
-“liberada”)
-La forma de agregar nuevas tarjetas queda según voluntad del postulante mientras la tarjeta
-tenga los datos mínimos (detalles y fecha de vencimiento).
-Dado que las tarjetas tienen estado, el estado es calculado respecto a la fecha de hoy
-versus la fecha de vencimiento de la tarea.
-Si el usuario cambia la fecha de vencimiento, la tarjeta se debe reubicar según corresponda.
-Es importante poder filtrar las tarjetas por texto, rango de tiempo, y estado (liberada,
-atrasada o pendiente).
-Es imperativo usar Redux para la gestión de datos en el front.
-Bonus
-Los siguientes aspectos entregarán al postulante un impulso en su aplicación:
-● El color de fondo de las tarjetas que sea ad hoc a su estado.
-● Estilos según alguna línea de diseño propuesta por el postulante (EJ: Material
-Design)
+Opcionalmente, puedes implementar filtros por atributo, ordenar productos y
+paginación.
 
-● Usar un middleware como redux-saga o redux-thunk para la comunicación con la
-API de forma asíncrona.
-● Usar typescript para el desarrollo de front y back.
-Entrega
-El postulante deberá entregar su solución con las instrucciones mínimas de ejecución. Si las
-Si las instrucciones entregadas no son suficientes para iniciar la aplicación, se asumirá
-como no entregada la postulación.
-Como se indicó anteriormente, el repositorio debe ser entregado en algún control de
-versiones GIT o similar.
-El plazo de entrega es el día viernes 19 de agosto a las 12:00 horas.
-Cualquier duda respecto al desarrollo, puede enviar un correo electrónico a ab@licitalab.cl
+La aplicación de cliente tiene que estar desarrollada con **vanilla javascript
+(javascript puro),sin ningún framework,** sipuedes usar libreríasocomponentes
+específicos, tales como; boopstrap, material, Jquery, entre otros.
+
+Finalmente, disponibilizarlaaplicacióny elrepositorioconelcódigoenunhosting
+comoamododeejemplo,puedeser;Heroku,Netlity uotro.Tambiénpuedeslevantar
+el sitio en una cuenta AWS.
+
+
+### Acceso a la base de datos de uso obligatorio
+
+Base de datos
+
+```
+● Motor: MySQL
+● Host: mdb-test.c 6 vunyturrl 6 .us-west- 1 .rds.amazonaws.com
+● Usuario: bsale_test
+● Contraseña: bsale_test
+● Nombre db: bsale_test
+```
+**Tip para la conexión** : El servidor está configurado para que todas aquellas
+conexiones inactivas por más de 5 segundos sean abortadas, por lo que te
+recomendamos utilizar alguna estrategia de “keep alive”
+
+Tablas
+
+```
+product
+id Identificador único del producto (int)
+name Nombre del producto (varchar)
+url_image URL de la imagen asociada al producto (varchar)
+price Precio de venta del producto (float)
+discount Porcentaje de descuento del producto (int)
+category Identificador de la categoría (int)
+```
+```
+category
+id Identificador único de la categoría (int)
+name Nombre de la categoría (varchar)
+```
+
+**Ejemplos de las imágenes que se encuentran en la BD**
+
+
+#### CONOCE LA PAUTA DE EVALUACIÓN
+
+```
+Categoría Acción que evaluaremos Ponderación
+Requisito obligatorio Se debe utilizar control de versiones Obligatorio
+Requisito obligatorio La aplicación debe tener deploy Obligatorio
+Programación El código debe ser limpio, ordenado y
+seguir buenas prácticas
+40 %
+Programación La aplicación debe ser eficiente y controlar
+errores
+Documentación Documentar la aplicación* 20 %
+Funcionalidad Que se entregue buena usabilidad y
+experiencia al usuario.^40 %
+TOTAL 100 %
+```
+```
+● ¿Quéesdocumentar? implicaexplicarejercicio,Apirest,FrontendyReadmeen
+el repositorio de ambos proyectos (back y front).
+```
+Ejemplo de documentación:
+https://apichile.bsalelab.com/lista-de-endpoints/productos-y-servicios/stocks
+
+## Mucho éxito!!!
+
+
