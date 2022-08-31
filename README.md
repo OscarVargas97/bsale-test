@@ -2,15 +2,17 @@
 
 
 ## Comandos de ejecución
+**Opcional**
 En caso de no tener docker compose instalado dejo un enlace de la documentación oficial [aquí](https://docs.docker.com/compose/install/).
 Se recomienda revisar las ultimas versiones de docker-compose desde el enlace oficial de github que se encuentra justo [aquí](https://github.com/docker/compose/releases).
 
 Tras purgar o eliminar el script utilizado anteriormente para instalar docker compose, se deben utilizar los siguientes comandos para instalar la version actual utilizada:
 ```console
 sudo curl -L "https://github.com/docker/compose/releases/download/2.10.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
+**Opcional terminado**
+
 Lo primero es clonar el repositorio y dirigirnos a la carpeta de bsale-test, finalmente cargar los comandos de ejecución.
 ```console
 git clone https://github.com/OscarVargas97/bsale-test.git
